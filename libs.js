@@ -4,7 +4,6 @@ if (!window.PRVD) {
 if (!window.PRVD.helper) {
     window.PRVD.helper = {};
 }
-
 function assertNamespaces() {
     var i;
     var j;
@@ -34,9 +33,7 @@ window.PRVD.helper.bindRoutes = (function() {
             bind(route, callback)
         }
     };
-
     function bind(route, cb) {
-        // TODO: route.fn as an array to handle multiple events on the same selector.
         var $el = $(route.el);
         var args = [cb.eventName];
         route.sel && args.push(route.sel);
